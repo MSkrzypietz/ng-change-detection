@@ -41,6 +41,7 @@ export class ListComponent extends BaseComponent implements OnChanges, DoCheck {
 
   getUsers(): Observable<User[]> {
     console.log('1 getUsers called')
+    this.setRender()
     return this.users
   }
 }

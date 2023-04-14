@@ -41,6 +41,7 @@ export class List3detailComponent extends BaseComponent {
 
   getUsers(): Observable<User[]> {
     console.log('3-detail getUsers called')
+    this.setRender()
     return this.users
   }
 

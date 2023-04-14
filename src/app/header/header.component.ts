@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, DoCheck, ElementRef } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BaseComponent } from '../base/base.component';
 import { StateService } from '../state.service';
 
@@ -19,5 +20,10 @@ export class HeaderComponent extends BaseComponent implements DoCheck {
 
   onCheck(): void {
     console.log('2 ngDoCheck');
+  }
+
+  getFirst(): Observable<boolean> {
+    this.setRender()
+    return this.stateService.getFirst()
   }
 }

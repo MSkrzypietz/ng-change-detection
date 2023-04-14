@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, SimpleChanges } from '@angular/core';
+import { Observable } from 'rxjs';
 import { BaseComponent } from 'src/app/base/base.component';
 import { StateService } from 'src/app/state.service';
 
@@ -19,5 +20,10 @@ export class List2detailComponent extends BaseComponent {
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('2-detail ngOnChanges', changes);
+  }
+
+  getFirst(): Observable<boolean> {
+    this.setRender()
+    return this.stateService.getFirst()
   }
 }
