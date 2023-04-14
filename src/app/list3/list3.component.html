@@ -1,0 +1,11 @@
+list3
+
+<div *ngFor="let user of getUsers() | async">
+  id: {{ user.id }}
+  name: {{ user.name }}
+  isSelected: {{ user.isSelected }}
+</div>
+
+<hr>
+
+<app-list3detail></app-list3detail>

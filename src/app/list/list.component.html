@@ -1,0 +1,11 @@
+list1
+
+<div *ngFor="let user of getUsers() | async">
+  id: {{ user.id }}
+  name: {{ user.name }}
+  isSelected: {{ user.isSelected }}
+</div>
+
+<!--
+{{ stateService.getFirst() | async }}
+-->

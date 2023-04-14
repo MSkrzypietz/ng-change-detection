@@ -1,0 +1,9 @@
+list2
+
+<div *ngFor="let user of getUsers() | async">
+  id: {{ user.id }}
+  name: {{ user.name }}
+  isSelected: {{ user.isSelected }}
+</div>
+
+<app-list2detail></app-list2detail>

@@ -1,0 +1,9 @@
+list3details
+
+<div *ngFor="let user of getUsers() | async">
+  id: {{ user.id }}
+  name: {{ user.name }}
+  isSelected: {{ user.isSelected }}
+</div>
+
+<button (click)="doNothing()">Nothing</button>
